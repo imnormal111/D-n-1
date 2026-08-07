@@ -38,10 +38,17 @@ import random
    # ketqua = "".join(mat_khau)
     #  print("Kết quả mật khẩu:", ketqua)
 #Bài 6
-do_dai = int(input("Nhập: "))
+#do_dai = int(input("Nhập: "))
 
-if do_dai < 4:
-    print("Kết quả:")
-    print("Cần ít nhất 4 ký tự!")
-else:
-    print("Độ dài hợp lệ")
+#if do_dai < 4:
+  #  print("Kết quả:")
+  #  print("Cần ít nhất 4 ký tự!")
+#else:
+    #print("Độ dài hợp lệ")
+#Bài 7
+#a = string.ascii_letters + string.digits + string.punctuation
+#print("Kết quả(ví dụ):")
+#for i in range(1,4):
+    #b = "".join(random.choices(a, k=6))
+    #print(f"Mật khẩu {i}: {b}")
+    
