@@ -70,20 +70,20 @@ import random, string
  #   print("Mật khẩu mạnh")
 #print("Mật khẩu:", a)
 #Bài 10
-a = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
-do_dai = int(input("Nhập độ dài mật khẩu:"))
-if do_dai < 4:
-    print("Độ dài mật khẩu phải dài hơn để chứa đủ 4 nhóm ký tự")
-else:
-    mat_khau = [random.choice(string.ascii_lowercase), random.choice(string.ascii_uppercase), random.choice(string.digits), random.choice(string.punctuation)]
-    mat_khau += random.choices(a, k=do_dai - 4)
-    mk = "".join(mat_khau)
-    random.shuffle(list(mk))
+#a = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+#do_dai = int(input("Nhập độ dài mật khẩu:"))
+#if do_dai < 4:
+ #   print("Độ dài mật khẩu phải dài hơn để chứa đủ 4 nhóm ký tự")
+#else:
+ #   mat_khau = [random.choice(string.ascii_lowercase), random.choice(string.ascii_uppercase), random.choice(string.digits), random.choice(string.punctuation)]
+  #  mat_khau += random.choices(a, k=do_dai - 4)
+   # mk = "".join(mat_khau)
+    #random.shuffle(list(mk))
     
-if do_dai <8:
-    print("Mật khẩu yếu")
-elif do_dai <=11:
-    print("Mật khẩu trung bình")
-else:
-    print("Mật khẩu mạnh")
-print("Mật khẩu:", mk)
+#if do_dai <8:
+ #   print("Mật khẩu yếu")
+#elif do_dai <=11:
+ #   print("Mật khẩu trung bình")
+#else:
+ #   print("Mật khẩu mạnh")
+#print("Mật khẩu:", mk)
