@@ -51,10 +51,3 @@ import random
 #for i in range(1,4):
     #b = "".join(random.choices(a, k=6))
     #print(f"Mật khẩu {i}: {b}")
-#logic mật khẩu: đủ chữ hoa, chữ thường, số và ký tự đặc biệt
-#Chuẩn bị kho ký tự đầy đủ 4 loại: hoa, thường, số, đặc biệt
-#Đảm bảo mật khẩu luôn có ít nhất 1 ký tự của mỗi loại
-#Trộn ngẫu nhiên vị trí
-#kiểm thử chương trình cho chắc chắn
-#Chọn ngẫu nhiên có thể xảy ra mật khẩu có thể thiếu 1 loại ký tự nào đó, nên cần đảm bảo có ít nhất 1 ký tự của mỗi loại
-#Giải pháp: chọn 1 ký tự của mỗi loại trước, sau đó chọn ngẫu nhiên các ký tự còn lại, cuối cùng trộn ngẫu nhiên vị trí
