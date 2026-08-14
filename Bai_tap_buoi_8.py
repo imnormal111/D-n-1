@@ -7,6 +7,11 @@ import random, string
 #tat_ca = a + b + c + d
 #print(tat_ca)
 #Bài 2
-a = ["P", "Y", "T", "H", "O", "N"]
-a = "".join(a)
-print(a)
+#a = ["P", "Y", "T", "H", "O", "N"]
+#a = "".join(a)
+#print(a)
+#Bài 3
+#tat_ca = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+#ask = int(input("Nhập độ dài mật khẩu:"))
+#mk = "".join(random.choices(tat_ca, k=ask))
+#print(mk)
