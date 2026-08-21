@@ -1,1 +1,2 @@
 Tất cả các file trong đây là của Lê Trương Gia Lâm
+Trình tạo mật khẩu bắt đầu với việc tạo kho ký tự, sau đó kiểm tra độ dài người dùng nhập vào, kiểm tra xem nó có trên 4 không(để chứa 4 nhóm ký tự) sau đó, bắt đầu random.choice các kho ký tự để đảm bảo có đủ 4 loại ký tự, rồi số còn lại thì random.choices kho tổng các ký tự hết. Sau đó, dựa vào độ dài mật khẩu mà đánh giá mật khẩu mạnh hay yếu rồi in ra.
