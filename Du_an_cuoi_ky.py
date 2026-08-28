@@ -48,7 +48,6 @@ elif phuong_tien.lower() == "xe buýt":
     print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi} VND")
     ma_chuyen_di = "".join(random.choices(string.ascii_uppercase + string.digits, k=6)) #TẠO MÃ CHUYẾN ĐI
     print(f"Mã chuyến đi: {ma_chuyen_di}")
-    
-    
-    
-    
+elif phuong_tien.lower() == "tàu hỏa":
+    chi_phi = quang_duong * 10000 #Giả sử giá vé tàu hỏa là 10000 VND/km
+    print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi} VND")
