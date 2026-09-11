@@ -1,4 +1,3 @@
-```python
 # TÍNH CHI PHÍ CHUYẾN ĐI
 
 import random
