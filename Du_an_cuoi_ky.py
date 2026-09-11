@@ -20,7 +20,7 @@ while tiep_tuc.lower() == "y":
         print("Quãng đường không hợp lệ")
         exit()
 
-    if muc_tieu_thu < 0:
+    if muc_tieu_thu <= 0:
         print("Mức tiêu thụ nhiên liệu không hợp lệ")
         exit()
 
