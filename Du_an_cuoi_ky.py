@@ -24,7 +24,6 @@ if muc_tieu_thu < 0:
 ma_chuyen_di = "".join(
     random.choices(string.ascii_uppercase + string.digits, k=6)
 )
-
 # XE MÁY
 if phuong_tien.lower() == "xe máy":
 
@@ -51,7 +50,6 @@ if phuong_tien.lower() == "xe máy":
     print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
     print(f"Mã chuyến đi: {ma_chuyen_di}")
 
-
 # Ô TÔ
 elif phuong_tien.lower() == "ô tô":
 
@@ -69,7 +67,6 @@ elif phuong_tien.lower() == "ô tô":
 
     chi_phi = quang_duong * muc_tieu_thu / 100 * gia_xang
     chi_phi = round(chi_phi)
-
     print("\n-THÔNG TIN CHUYẾN ĐI-")
     print("Phương tiện:", phuong_tien)
     print("Quãng đường:", quang_duong, "km")
@@ -78,12 +75,9 @@ elif phuong_tien.lower() == "ô tô":
     print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
     print(f"Mã chuyến đi: {ma_chuyen_di}")
 
-
 # XE BUÝT
 elif phuong_tien.lower() == "xe buýt":
-
     loai_xang = input("Nhập loại xăng (A95, A92, E5): ")
-
     if loai_xang.upper() == "A95":
         gia_xang = 25000
     elif loai_xang.upper() == "A92":
@@ -97,12 +91,9 @@ elif phuong_tien.lower() == "xe buýt":
     chi_phi_nhien_lieu = (
         quang_duong * muc_tieu_thu / 100 * gia_xang
     )
-
     chi_phi_ve = quang_duong * 5000
-
     chi_phi = chi_phi_nhien_lieu + chi_phi_ve
     chi_phi = round(chi_phi)
-
     print("\n-THÔNG TIN CHUYẾN ĐI-")
     print("Phương tiện:", phuong_tien)
     print("Quãng đường:", quang_duong, "km")
@@ -113,32 +104,25 @@ elif phuong_tien.lower() == "xe buýt":
     print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
     print(f"Mã chuyến đi: {ma_chuyen_di}")
 
-
 # TÀU HỎA
 elif phuong_tien.lower() == "tàu hỏa":
-
     chi_phi = quang_duong * 10000
     chi_phi = round(chi_phi)
-
     print("\n-THÔNG TIN CHUYẾN ĐI-")
     print("Phương tiện:", phuong_tien)
     print("Quãng đường:", quang_duong, "km")
     print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
     print(f"Mã chuyến đi: {ma_chuyen_di}")
-
 
 # MÁY BAY
 elif phuong_tien.lower() == "máy bay":
-
     chi_phi = quang_duong * 3000
     chi_phi = round(chi_phi)
-
     print("\n-THÔNG TIN CHUYẾN ĐI-")
     print("Phương tiện:", phuong_tien)
     print("Quãng đường:", quang_duong, "km")
     print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
     print(f"Mã chuyến đi: {ma_chuyen_di}")
-
 
 # PHƯƠNG TIỆN KHÔNG HỢP LỆ
 else:
