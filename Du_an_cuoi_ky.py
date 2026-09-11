@@ -73,8 +73,6 @@ while tiep_tuc.lower() == "y":
             gia_xang = 23000
         elif loai_xang.upper() == "E5":
             gia_xang = 22000
-        elif loai_xang.upper() == "E5":
-            gia_xang = 22000
         else:
             print("Loại xăng không hợp lệ")
             exit()
