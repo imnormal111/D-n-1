@@ -52,7 +52,7 @@ while tiep_tuc.lower() == "y":
         chi_phi = round(chi_phi)
         chi_phi = chi_phi * so_nguoi
 
-        print("\n--- THÔNG TIN CHUYẾN ĐI ---")
+        print("\n-YTHÔNG TIN CHUYẾN ĐI-")
         print("Phương tiện:", phuong_tien)
         print("Quãng đường:", quang_duong, "km")
         print("Mức tiêu thụ:", muc_tieu_thu, "lít/100km")
