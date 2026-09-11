@@ -50,5 +50,4 @@ Chi phí = Lượng nhiên liệu × Giá nhiên liệu
 4. Nhập các thông tin được yêu cầu.
 
 ## Tác giả
-
-SLGAMING
+LÊ TRƯƠNG GIA LÂM
