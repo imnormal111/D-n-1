@@ -27,6 +27,9 @@ while tiep_tuc.lower() == "y":
     if so_nguoi <= 0:
         print("Số người không hợp lệ")
         exit()
+    if phuong_tien.lower() not in ["xe máy", "ô tô", "xe buýt", "tàu hỏa", "máy bay"]:
+        print("Phương tiện không hợp lệ")
+        exit()
 
     # Tạo mã chuyến đi
     ma_chuyen_di = "".join(
@@ -159,4 +162,3 @@ while tiep_tuc.lower() == "y":
     if tiep_tuc.lower() != "y":
         print("Cảm ơn bạn đã sử dụng chương trình!")
         break
-
