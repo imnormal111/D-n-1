@@ -1,5 +1,3 @@
-# TÍNH CHI PHÍ CHUYẾN ĐI
-
 import random
 import string
 
@@ -18,18 +16,19 @@ while tiep_tuc.lower() == "y":
     # Kiểm tra dữ liệu
     if quang_duong <= 0:
         print("Quãng đường không hợp lệ")
-        exit()
+        continue
 
     if muc_tieu_thu <= 0:
         print("Mức tiêu thụ nhiên liệu không hợp lệ")
-        exit()
+        continue
 
     if so_nguoi <= 0:
         print("Số người không hợp lệ")
-        exit()
+        continue
+
     if phuong_tien.lower() not in ["xe máy", "ô tô", "xe buýt", "tàu hỏa", "máy bay"]:
         print("Phương tiện không hợp lệ")
-        exit()
+        continue
 
     # Tạo mã chuyến đi
     ma_chuyen_di = "".join(
@@ -49,19 +48,19 @@ while tiep_tuc.lower() == "y":
             gia_xang = 22000
         else:
             print("Loại xăng không hợp lệ")
-            exit()
+            continue
 
-        chi_phi = quang_duong * muc_tieu_thu / 100 * gia_xang
-        chi_phi = round(chi_phi)
-        chi_phi = chi_phi * so_nguoi
+        tong_chi_phi = quang_duong * muc_tieu_thu / 100 * gia_xang
+        chi_phi_moi_nguoi = tong_chi_phi / so_nguoi
 
-        print("\n-YTHÔNG TIN CHUYẾN ĐI-")
+        print("\n-THÔNG TIN CHUYẾN ĐI-")
         print("Phương tiện:", phuong_tien)
         print("Quãng đường:", quang_duong, "km")
         print("Mức tiêu thụ:", muc_tieu_thu, "lít/100km")
         print("Loại xăng:", loai_xang.upper())
         print("Số người:", so_nguoi)
-        print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
+        print(f"Tổng chi phí chuyến đi bằng {phuong_tien} là: {round(tong_chi_phi):,} VND")
+        print(f"Chi phí mỗi người: {round(chi_phi_moi_nguoi):,} VND")
         print(f"Mã chuyến đi: {ma_chuyen_di}")
 
     # Ô TÔ
@@ -77,11 +76,10 @@ while tiep_tuc.lower() == "y":
             gia_xang = 22000
         else:
             print("Loại xăng không hợp lệ")
-            exit()
+            continue
 
-        chi_phi = quang_duong * muc_tieu_thu / 100 * gia_xang
-        chi_phi = round(chi_phi)
-        chi_phi = chi_phi * so_nguoi
+        tong_chi_phi = quang_duong * muc_tieu_thu / 100 * gia_xang
+        chi_phi_moi_nguoi = tong_chi_phi / so_nguoi
 
         print("\n-THÔNG TIN CHUYẾN ĐI-")
         print("Phương tiện:", phuong_tien)
@@ -89,7 +87,8 @@ while tiep_tuc.lower() == "y":
         print("Mức tiêu thụ:", muc_tieu_thu, "lít/100km")
         print("Loại xăng:", loai_xang.upper())
         print("Số người:", so_nguoi)
-        print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
+        print(f"Tổng chi phí chuyến đi bằng {phuong_tien} là: {round(tong_chi_phi):,} VND")
+        print(f"Chi phí mỗi người: {round(chi_phi_moi_nguoi):,} VND")
         print(f"Mã chuyến đi: {ma_chuyen_di}")
 
     # XE BUÝT
@@ -103,15 +102,11 @@ while tiep_tuc.lower() == "y":
             gia_xang = 22000
         else:
             print("Loại xăng không hợp lệ")
-            exit()
+            continue
 
-        chi_phi_nhien_lieu = (
-            quang_duong * muc_tieu_thu / 100 * gia_xang
-        )
-        chi_phi_ve = quang_duong * 5000
-        chi_phi = chi_phi_nhien_lieu + chi_phi_ve
-        chi_phi = round(chi_phi)
-        chi_phi = chi_phi * so_nguoi
+        chi_phi_nhien_lieu = quang_duong * muc_tieu_thu / 100 * gia_xang
+        chi_phi_ve = quang_duong * 5000 * so_nguoi
+        tong_chi_phi = chi_phi_nhien_lieu + chi_phi_ve
 
         print("\n-THÔNG TIN CHUYẾN ĐI-")
         print("Phương tiện:", phuong_tien)
@@ -121,44 +116,33 @@ while tiep_tuc.lower() == "y":
         print("Số người:", so_nguoi)
         print("Chi phí nhiên liệu:", round(chi_phi_nhien_lieu), "VND")
         print("Chi phí vé:", round(chi_phi_ve), "VND")
-        print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
+        print(f"Tổng chi phí chuyến đi bằng {phuong_tien} là: {round(tong_chi_phi):,} VND")
         print(f"Mã chuyến đi: {ma_chuyen_di}")
 
     # TÀU HỎA
     elif phuong_tien.lower() == "tàu hỏa":
-        chi_phi = quang_duong * 10000
-        chi_phi = round(chi_phi)
-        chi_phi = chi_phi * so_nguoi
+        chi_phi_ve = quang_duong * 10000
+        tong_chi_phi = chi_phi_ve * so_nguoi
 
         print("\n-THÔNG TIN CHUYẾN ĐI-")
         print("Phương tiện:", phuong_tien)
         print("Quãng đường:", quang_duong, "km")
         print("Số người:", so_nguoi)
-        print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
+        print(f"Chi phí chuyến đi bằng {phuong_tien} là: {round(tong_chi_phi):,} VND")
         print(f"Mã chuyến đi: {ma_chuyen_di}")
 
     # MÁY BAY
     elif phuong_tien.lower() == "máy bay":
-        chi_phi = quang_duong * 3000
-        chi_phi = round(chi_phi)
-        chi_phi = chi_phi * so_nguoi
+        chi_phi_ve = quang_duong * 3000
+        tong_chi_phi = chi_phi_ve * so_nguoi
 
         print("\n-THÔNG TIN CHUYẾN ĐI-")
         print("Phương tiện:", phuong_tien)
         print("Quãng đường:", quang_duong, "km")
         print("Số người:", so_nguoi)
-        print(f"Chi phí chuyến đi bằng {phuong_tien} là: {chi_phi:,} VND")
+        print(f"Chi phí chuyến đi bằng {phuong_tien} là: {round(tong_chi_phi):,} VND")
         print(f"Mã chuyến đi: {ma_chuyen_di}")
-
-    # PHƯƠNG TIỆN KHÔNG HỢP LỆ
-    else:
-
-        print("Phương tiện không hợp lệ")
-        print("Vui lòng chọn: xe máy, ô tô, xe buýt, tàu hỏa hoặc máy bay")
-        exit()
 
     tiep_tuc = input("\nBạn có muốn tính chi phí chuyến đi tiếp theo không? (y/n): ")
 
-    if tiep_tuc.lower() != "y":
-        print("Cảm ơn bạn đã sử dụng chương trình!")
-        break
+print("Cảm ơn bạn đã sử dụng chương trình!")
