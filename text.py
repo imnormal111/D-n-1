@@ -1,0 +1,4 @@
+#command = ten_ham()-có dấu ngoặc tròn để gọi hàm ngay lập tức, không có dấu ngoặc tròn để chỉ định hàm sẽ được gọi khi nhấn nút
+#.config(text="Mục tiêu hiện tại: {target_score} điểm")
+#pack: là một phương thức trong Tkinter được sử dụng để đặt vị trí của các widget (như nút, nhãn, ô nhập liệu) trong cửa sổ ứng dụng. Khi bạn gọi phương thức pack() trên một widget, nó sẽ tự động được đặt vào cửa sổ theo thứ tự mà bạn gọi pack() cho các widget khác. Bạn có thể sử dụng các tùy chọn như padx, pady để thêm khoảng cách giữa các widget.
+#grid(): là một phương thức trong Tkinter được sử dụng để đặt vị trí của các widget (như nút, nhãn, ô nhập liệu) trong cửa sổ ứng dụng theo dạng lưới. Khi bạn gọi phương thức grid() trên một widget, bạn có thể chỉ định vị trí của nó bằng cách sử dụng các tham số row (hàng) và column (cột). Bạn cũng có thể sử dụng các tùy chọn như padx, pady để thêm khoảng cách giữa các widget.
